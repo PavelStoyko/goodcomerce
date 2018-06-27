@@ -108,27 +108,7 @@
                         <a href="#" class="post-link active">Most profitable</a>
                     </div>
                     <div class="posts_content">
-                        <div class="profit_item">
-                            <div class="profit_thumbnail">
-                                <img src="img/prof_1.jpg" alt="">
-                            </div>
-                            <div class="prof_text">
-                                <a href="#" class="prof_link"><h3 class="prof_title">Sanergy</h3></a>
-                                <p class="prof_excerpt">Sanergy builds healthy, prosperous communities by making hygienic sanitation affordable and accessible</p>
-                            </div>
-                            <div class="price_wrap">
-                                <div class="price_info">COST
-                                    <span class="price_item">KES 500</span>
-                                </div>
-                                <div class="price_info">CREDIT
-                                    <span class="price_item">KES 450</span>
-                                </div>
-                                <div class="price_info">
-                                    <span class="price_title">REPAYMENT</span>
-                                    <span class="price_date"><strong class="price_month">6</strong> months</span>
-                                </div>
-                            </div>
-                        </div>
+                       @include('parts.cart')
                         <div class="profit_item">
                             <div class="profit_thumbnail">
                                 <img src="img/prof_2.jpg" alt="">
@@ -277,8 +257,8 @@
             <div class="page_point"></div>
             <ul class="page_list">
                 <li><a href="index.html">Index</a></li>
-                <li><a href="login.html">Registration</a></li>
-                <li><a href="login-in.html">Login in</a></li>
+                <li><a href="/register">Registration</a></li>
+                <li><a href="/login">Login in</a></li>
                 <li><a href="opportunities.html">Opportunities</a></li>
                 <li><a href="sanergy.html">Sanergy</a></li>
                 <li><a href="start-sanergy.html">Start Sanergy</a></li>
