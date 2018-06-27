@@ -1,80 +1,101 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Goodcommerce</title>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="description" content="">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Mobile-friendly viewport -->
+    <meta name="viewport" content="user-scalable=1, width=device-width">
+
+    <!-- Turn off "smart" recognition phone number -->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+
+    <!-- Style sheet link -->
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="top_wrap">
+                <div class="logo_wrap">
+                    <a href="/">
+                        <img src="img/logo.png" alt="Goodcommerce logo">
                     </a>
                 </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
+                <div class="top_nav">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#">start</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Grow</a>
+                        </li>
                     </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
+                    <a href="/admin/login" class="sign-btn">sign in</a>
                 </div>
             </div>
-        </nav>
-
-        @yield('content')
+        </div>
     </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+</header>
+<section class="wrapper">
+    <main>
+        <div class="figure_img">
+            <img src="img/figure.png" alt="">
+        </div>
+        <div class="main_wrap">
+            <div class="main_thumbnail">
+                <img src="img/main.png" alt="">
+            </div>
+       @yield('content')
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="bottom_wrapper">
+                    <div class="bottom_wrap">
+                        <div class="ftr_logo">
+                            <a href="/">
+                                <img src="img/ftr-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="socials_links">
+                            <a href="#" target="_blank" class="social_link"><img src="img/facebook.png" alt=""></a>
+                            <a href="#" target="_blank" class="social_link"><img src="img/twitter.png" alt=""></a>
+                            <a href="#" target="_blank" class="social_link"><img src="img/google-plus.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="footer_wrap">
+                        <div class="copyright">
+                            <span class="copyright_info">© 2018 Goodcommerce. All Rights Reserved</span>
+                        </div>
+                        <div class="terms_links">
+                            <a href="#" class="term_link">Terms & Conditions</a>
+                            <a href="#" class="term_link">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all_pages">
+            <div class="page_point"></div>
+            <ul class="page_list">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="/register">Registration</a></li>
+                <li><a href="login-in.html">Login in</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="sanergy.html">Sanergy</a></li>
+                <li><a href="start-sanergy.html">Start Sanergy</a></li>
+            </ul>
+        </div>
+    </footer>
+</section>
 </body>
 </html>

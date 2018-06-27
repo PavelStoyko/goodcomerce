@@ -38,7 +38,7 @@
                             <a href="#">Grow</a>
                         </li>
                     </ul>
-                    <a href="#" class="sign-btn">sign in</a>
+                    <a href="/admin/login" class="sign-btn">sign in</a>
                 </div>
             </div>
         </div>
