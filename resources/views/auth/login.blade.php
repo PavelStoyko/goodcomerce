@@ -54,12 +54,25 @@
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
-
+                                <a class="btn " href="{{ url('/register') }}">
+                                    Registration
+                                </a>
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
                                 </a>
                             </div>
                         </div>
+
+                        <div class="form_group social_login">
+                            <p class="social_title">Or login with</p>
+                            <div class="soc_nets">
+                                <a href="/auth/facebook" target="_blank" class="enter_link"><img src="img/fb-log.png" alt=""></a>
+                                <a href="/auth/twitter" target="_blank" class="enter_link"><img src="img/tw-log.png" alt=""></a>
+                                <a href="/auth/google" target="_blank" class="enter_link"><img src="img/gp-log.png" alt=""></a>
+                                <a href="/auth/linkedin" target="_blank" class="enter_link"><img src="img/in-log.png" alt=""></a>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>

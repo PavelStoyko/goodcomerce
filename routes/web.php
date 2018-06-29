@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'BusinessesController@index');
+
 
 Auth::routes();
 
@@ -21,7 +20,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 /*
- * routs for facebook
+ * routs for socialite
  * */
 
 Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider');
