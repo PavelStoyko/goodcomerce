@@ -38,7 +38,7 @@
                             <a href="#">Grow</a>
                         </li>
                     </ul>
-                    <a href="/admin/login" class="sign-btn">sign in</a>
+                    <a href="/login" class="sign-btn">sign in</a>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                             <p class="description short_description">We are crating a platform to distribute social goods and services to underserved communities.</p>
                             <p class="description">We fund local enterpreneurs to start and scale micro enterprises that sell and serve local communities with goods and services that are profitable and create a social impact in the communities where they live.</p>
                             <div class="action">
-                                <a href="#" class="btn btn-start">get started</a>
+                                <a href="/register" class="btn btn-start">get started</a>
                             </div>
                         </div>
                     </div>
@@ -236,7 +236,7 @@
                             </a>
                         </div>
                         <div class="socials_links">
-                            <a href="#" target="_blank" class="social_link"><img src="img/facebook.png" alt=""></a>
+                            <a href="{{url('/redirect')}}" target="_blank" class="social_link"><img src="img/facebook.png" alt=""></a>
                             <a href="#" target="_blank" class="social_link"><img src="img/twitter.png" alt=""></a>
                             <a href="#" target="_blank" class="social_link"><img src="img/google-plus.png" alt=""></a>
                         </div>

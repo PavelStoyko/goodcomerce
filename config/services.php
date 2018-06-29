@@ -35,4 +35,31 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => env('FB_CLIENT_ID'),
+        'client_secret' => env('FB_CLIENT_SECRET'),
+        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+//        'redirect' => 'http://business.isolly.com/callback',
+    ],
+
+    'twitter' => [
+        'client_id' => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect' => 'http://localhost:8000/auth/twitter/callback',
+//        'redirect' => 'http://business.isolly.com/callback',
+    ],
+
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect' => 'http://localhost:8000/auth/google/callback',
+//        'redirect' => 'http://business.isolly.com/callback',
+    ],
+
+    'linkedin' => [
+        'client_id' => env('LINKEDIN_CLIENT_ID'),
+        'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
+        'redirect' => 'http://localhost:8000/auth/linkedin/callback',
+//        'redirect' => 'http://business.isolly.com/auth/linkedin/callback',
+    ],
 ];
