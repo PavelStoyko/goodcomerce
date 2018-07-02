@@ -1,82 +1,74 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="margin-top: 150px;">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4">
+                <div class="text_wrap sign_wrap">
+                    <h1 class="main_title">Sign In</h1>
+                    <div class="form_wrap">
+                        @if (session('confirmation-success'))
+                            <div class="alert alert-success">
+                                {{ session('confirmation-success') }}
                             </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+                        @endif
+                        @if (session('confirmation-danger'))
+                            <div class="alert alert-danger">
+                                {!! session('confirmation-danger') !!}
                             </div>
-                        </div>
+                        @endif
+                        <form class="form" method="POST" action="{{ route ('login')}}" >
+                            {{ csrf_field() }}
+                            <div class="form_content">
+                                <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                                    <span class="label_form">Email</span>
+                                    <input id="email" type="email" class="form-control form_text" name="email" value="{{ old('email') }}" required autofocus aria-invalid="false">
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                                        <p class="error_message">{{ $errors->first('email') }}</p>
+                                                    </span>
+                                    @endif
+                                </div>
+                                <div class="form_group {{ $errors->has('password') ? ' has-error' : '' }}">
+                                    <span class="label_form">Password</span>
+                                    <input type="password" name="password" class="form-control form_text" required aria-invalid="false">
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                </span>
+                                    @endif
+                                </div>
+                                <div class="form_group check">
                                     <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                        <input type="checkbox" class="checkbox" name="show_password" aria-required="true" aria-invalid="false">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="label_check">Show password</span>
                                     </label>
+                                    <a href="{{route('password.request')}}" class="privacy_link recall">Forgot?</a>
+                                </div>
+                                <div class="form_group social_login">
+                                    <p class="social_title">Or login with</p>
+                                    <div class="soc_nets">
+                                        <a href="/auth/facebook" target="_blank" class="enter_link"><img src="img/fb-log.png" alt="facebook"></a>
+                                        <a href="/auth/twitter" target="_blank" class="enter_link"><img src="img/tw-log.png" alt="twitter"></a>
+                                        <a href="/auth/google" target="_blank" class="enter_link"><img src="img/gp-log.png" alt="google"></a>
+                                        <a href="/auth/linkedin" target="_blank" class="enter_link"><img src="img/in-log.png" alt="linkedin"></a>
+                                    </div>
+                                </div>
+                                <div class="form_actions">
+                                    <div class="action_wrap">
+                                        <input type="submit" class="btn btn-start" value="Sign in">
+                                    </div>
+                                    <div class="action_info action_sign">
+                                        <p class="login_info">Don't have an account yet? <a href="/register" class="privacy_link">Sign Up</a></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-                                <a class="btn " href="{{ url('/register') }}">
-                                    Registration
-                                </a>
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="form_group social_login">
-                            <p class="social_title">Or login with</p>
-                            <div class="soc_nets">
-                                <a href="/auth/facebook" target="_blank" class="enter_link"><img src="img/fb-log.png" alt=""></a>
-                                <a href="/auth/twitter" target="_blank" class="enter_link"><img src="img/tw-log.png" alt=""></a>
-                                <a href="/auth/google" target="_blank" class="enter_link"><img src="img/gp-log.png" alt=""></a>
-                                <a href="/auth/linkedin" target="_blank" class="enter_link"><img src="img/in-log.png" alt=""></a>
-                            </div>
-                        </div>
-
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
