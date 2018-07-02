@@ -175,7 +175,7 @@ return [
          */
 
         Laravel\Socialite\SocialiteServiceProvider::class,
-
+        Bestmomo\LaravelEmailConfirmation\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
