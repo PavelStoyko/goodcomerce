@@ -14,14 +14,21 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-rim-auto-match" content="none">
 
+{{--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">--}}
+{{--<link rel="stylesheet" href="/resources/demos/style.css">--}}
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <!-- Style sheet link -->
     <link href="css/main.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">--}}
-    {{--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>--}}
-    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>--}}
-    {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>--}}
+
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+    </script>
 </head>
 <body>
 
@@ -107,36 +114,28 @@
         </div>
         <div class="business_wrapper">
             <div class="container">
-                <div class="row">
-                    <div class="most_nav">
-                        <a class="post-link" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Most popular</a>
-                        <a class="post-link" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Most profitable</a>
-                    </div>
-                    <div class="posts_content tab-content"  id="myTabContent">
+                <div class="row" id="tabs">
 
-                        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="home-tab">
+                    <ul class="most_nav" style="list-style: none; display: flex; ">
+                        <li><a href="#tabs-1" class="post-link" role="tab" aria-controls="tab1" aria-selected="true">Most popular</a></li>
+                        <li><a href="#tabs-2" class="post-link" role="tab" aria-controls="tab2" aria-selected="false">Most profitable</a></li>
+                    </ul>
 
+
+
+                        <div  class="posts_content"  id="tabs-1" >
                             @foreach($mostPopular as $business)
-tab1
-                                @include ('parts.business_preview', ['business' => $business])
-
+                            @include ('parts.business_preview', ['business' => $business])
                             @endforeach
-
-
                         </div>
 
-                        <div class="tab-pane fade show" id="tab2" role="tabpanel" aria-labelledby="home-tab" >
-
+                        <div class="posts_content"  id="tabs-2" >
                             @foreach($mostProfitable as $business)
-                                                                tab 2
-                                @include ('parts.business_preview', ['business' => $business])
-
+                            @include('parts.business_preview', ['business' => $business])
                             @endforeach
-
-
                         </div>
 
-                    </div>
+
                     <div class="bottom-action">
                         <a href="#" class="btn btn-more">start more businesses</a>
                     </div>
@@ -188,16 +187,5 @@ tab1
         </div>
     </footer>
 </section>
-<script>
-    jQuery(document).ready(function () {
-        $('.post-link a:first').on('click',
-            function () {
-                $(.tab-panel div:first).removeClass("active");
-                $(.tab-panel div:first).addClass("active");
-                menuSubCloseAll.call(this, 'menuProducts');
-                $('#menuProducts').find('li').slideToggle(200);
-            });
-    });
-</script>
 </body>
 </html>

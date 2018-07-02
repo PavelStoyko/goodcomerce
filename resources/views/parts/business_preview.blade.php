@@ -1,10 +1,10 @@
 <div class="profit_item">
     <div class="profit_thumbnail">
-        <img src="{{$business->photo}}" alt="">
+        <img src="{{$business->photo}}" alt="{{$business->title}}">
     </div>
     <div class="prof_text">
         <a href="#" class="prof_link">
-            <h3 class="prof_title">{{$business->title}}</h3>
+            <h3 class="prof_title">{{$business->name}}</h3>
         </a>
         <p class="prof_excerpt">{{$business->description}}</p>
     </div>
