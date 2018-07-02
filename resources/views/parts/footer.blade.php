@@ -9,9 +9,9 @@
                         </a>
                     </div>
                     <div class="socials_links">
-                        <a href="{{url('/redirect')}}" target="_blank" class="social_link"><img src="img/facebook.png" alt=""></a>
-                        <a href="#" target="_blank" class="social_link"><img src="img/twitter.png" alt=""></a>
-                        <a href="#" target="_blank" class="social_link"><img src="img/google-plus.png" alt=""></a>
+                        <a href="https://www.facebook.com/" target="_blank" class="social_link"><img src="img/facebook.png" alt=""></a>
+                        <a href="https://twitter.com" target="_blank" class="social_link"><img src="img/twitter.png" alt=""></a>
+                        <a href="https://plus.google.com" target="_blank" class="social_link"><img src="img/google-plus.png" alt=""></a>
                     </div>
                 </div>
                 <div class="footer_wrap">

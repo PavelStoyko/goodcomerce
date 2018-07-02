@@ -67,9 +67,9 @@
                             </a>
                         </div>
                         <div class="socials_links">
-                            <a href="#" target="_blank" class="social_link"><img src="img/facebook.png" alt=""></a>
-                            <a href="#" target="_blank" class="social_link"><img src="img/twitter.png" alt=""></a>
-                            <a href="#" target="_blank" class="social_link"><img src="img/google-plus.png" alt=""></a>
+                            <a href="https://www.facebook.com/" target="_blank" class="social_link"><img src="img/facebook.png" alt=""></a>
+                            <a href="https://twitter.com" target="_blank" class="social_link"><img src="img/twitter.png" alt=""></a>
+                            <a href="https://plus.google.com" target="_blank" class="social_link"><img src="img/google-plus.png" alt=""></a>
                         </div>
                     </div>
                     <div class="footer_wrap">
@@ -83,17 +83,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="all_pages">
-            <div class="page_point"></div>
-            <ul class="page_list">
-                <li><a href="index.html">Index</a></li>
-                <li><a href="/register">Registration</a></li>
-                <li><a href="login-in.html">Login in</a></li>
-                <li><a href="opportunities.html">Opportunities</a></li>
-                <li><a href="sanergy.html">Sanergy</a></li>
-                <li><a href="start-sanergy.html">Start Sanergy</a></li>
-            </ul>
         </div>
     </footer>
 </section>
