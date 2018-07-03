@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Goodcommerce</title>
+    <title>{{env('APP_NAME')}}</title>
 
     <meta name="description" content="">
 
@@ -38,7 +38,20 @@
                             <a href="#">Grow</a>
                         </li>
                     </ul>
+                    @if(Auth::guest())
                     <a href="{{route('login')}}" class="sign-btn">sign in</a>
+                        @else <a class="sign-btn" href="{{ route('logout') }}"
+                                 onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        {{Auth::user()->name}}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+
+                        {{--<a href="{{route('logout')}}" class="sign-btn">{{Auth::user()->name}}</a>--}}
+                        @endif
                 </div>
             </div>
         </div>

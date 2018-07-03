@@ -12,6 +12,10 @@
 */
 
 Route::get('/', 'BusinessesController@index');
+Route::get('/moreBusinesses', 'BusinessesController@show');
+Route::get('/business/{id}', 'BusinessesController@showBusiness');
+
+
 
 
 Auth::routes();

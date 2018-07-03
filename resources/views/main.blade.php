@@ -14,10 +14,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-rim-auto-match" content="none">
 
-{{--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">--}}
-{{--<link rel="stylesheet" href="/resources/demos/style.css">--}}
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- Style sheet link -->
     <link href="css/main.css" rel="stylesheet" media="all">
@@ -75,13 +73,13 @@
                         </div>
                         <div class="stat_item">
 							<span class="stat_description">
-								<strong>25K</strong>
+								<strong>{{$jobs_created}}</strong>
 								jobs created
 							</span>
                         </div>
                         <div class="stat_item">
 							<span class="stat_description">
-								<strong>1M</strong>
+								<strong>{{$lives_impact}}</strong>
 								lives impacted
 							</span>
                         </div>
@@ -114,7 +112,7 @@
 
 
                     <div class="bottom-action">
-                        <a href="#" class="btn btn-more">start more businesses</a>
+                        <a href="{{url('/moreBusinesses')}}" class="btn btn-more">start more businesses</a>
                     </div>
                 </div>
             </div>
