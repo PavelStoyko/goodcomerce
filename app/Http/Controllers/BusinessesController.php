@@ -36,18 +36,19 @@ class BusinessesController extends Controller
     public function show()
     {
         $businesses = Business::latest()->paginate(12);
-
-            if(Auth::guest()) return redirect('login');
-            else return view('parts.businesses', ['businesses' => $businesses]);
+        if(Auth::guest()) return redirect('login');
+        else return view('parts.businesses', ['businesses' => $businesses]);
 
 
 
     }
 
-    public function showBusiness($id)
+    public function viewBusiness($id)
     {
         $business = Business::find($id);
-
-        return view('parts.show_business', ['business' => $business]);
+        if(Auth::guest()) return redirect('login');
+        else return view('parts.show_business', ['business' => $business]);
     }
+
+
 }

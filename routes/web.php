@@ -12,8 +12,8 @@
 */
 
 Route::get('/', 'BusinessesController@index');
-Route::get('/moreBusinesses', 'BusinessesController@show');
-Route::get('/business/{id}', 'BusinessesController@showBusiness');
+Route::get('/businesses', 'BusinessesController@show');
+Route::get('/business/{id}', 'BusinessesController@viewBusiness');
 
 
 

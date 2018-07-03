@@ -4,7 +4,7 @@
             <div class="top_wrap">
                 <div class="logo_wrap">
                     <a href="/">
-                        <img src="img/logo.png" alt="GoodСommerce logo">
+                        <img src="{{url('img/logo.png')}}" alt="GoodСommerceLogo">
                     </a>
                 </div>
                 <div class="top_nav">

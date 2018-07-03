@@ -18,10 +18,10 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- Style sheet link -->
-    <link href="css/main.css" rel="stylesheet" media="all">
+    <link href="{{url('css/main.css')}}" rel="stylesheet" media="all">
+    {{--<link href="{{url('js/main.js')}}" rel="stylesheet" media="all">--}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-
     <script>
         $( function() {
             $( "#tabs" ).tabs();
@@ -68,7 +68,7 @@
                         <div class="stat_item">
 							<span class="stat_description">
 								<strong>100</strong>
-								fuonded businesses
+								founded businesses
 							</span>
                         </div>
                         <div class="stat_item">
@@ -112,13 +112,13 @@
 
 
                     <div class="bottom-action">
-                        <a href="{{url('/moreBusinesses')}}" class="btn btn-more">start more businesses</a>
+                        <a href="{{url('/businesses')}}" class="btn btn-more">start more businesses</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="figure_img-2">
-            <img src="img/figure_2.png" alt="">
+            <img src="{{url('img/figure_2.png')}}" alt="figure">
         </div>
     </main>
 @include('parts.footer')

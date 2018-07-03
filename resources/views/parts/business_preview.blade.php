@@ -3,7 +3,7 @@
         <img src="{{$business->photo}}" alt="{{$business->title}}">
     </div>
     <div class="prof_text">
-        <a href="#" class="prof_link">
+        <a href="{{url("business/{$business->id}")}}" class="prof_link">
             <h3 class="prof_title">{{$business->name}}</h3>
         </a>
         <p class="prof_excerpt">{{$business->description}}</p>

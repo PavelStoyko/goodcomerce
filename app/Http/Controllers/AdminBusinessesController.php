@@ -33,6 +33,7 @@
 			$this->col[] = ["label"=>"Photo","name"=>"photo","image"=>true,"width"=>"200"];
 			$this->col[] = ["label"=>"Name","name"=>"name","width"=>"100"];
 			$this->col[] = ["label"=>"Description","name"=>"description","width"=>"400"];
+			$this->col[] = ["label"=>"TargetMarket","name"=>"targetMarket","width"=>"400"];
 			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"20"];
 			$this->col[] = ["label"=>"Discount","name"=>"discount","width"=>"20"];
 			$this->col[] = ["label"=>"Interest","name"=>"interest","width"=>"20"];
@@ -43,7 +44,8 @@
 			$this->form = [];
 			$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-5','placeholder'=>'You can only enter the letter only'];
-			$this->form[] = ['label'=>'Description','name'=>'description','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-8'];
+			$this->form[] = ['label'=>'Description','name'=>'description','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-5'];
+			$this->form[] = ['label'=>'TargetMarket','name'=>'targetMarket','type'=>'textarea','validation'=>'required','width'=>'col-sm-5'];
 			$this->form[] = ['label'=>'Cost','name'=>'cost','type'=>'number','validation'=>'required|min:1','width'=>'col-sm-5'];
 			$this->form[] = ['label'=>'Discount','name'=>'discount','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
 			$this->form[] = ['label'=>'Interest','name'=>'interest','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
@@ -56,6 +58,7 @@
 			//$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			//$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-5','placeholder'=>'You can only enter the letter only'];
 			//$this->form[] = ['label'=>'Description','name'=>'description','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-8'];
+			//$this->form[] = ['label'=>'TargetMarket','name'=>'targetMarket','type'=>'textarea','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Cost','name'=>'cost','type'=>'number','validation'=>'required|min:1','width'=>'col-sm-5'];
 			//$this->form[] = ['label'=>'Discount','name'=>'discount','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
 			//$this->form[] = ['label'=>'Interest','name'=>'interest','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
