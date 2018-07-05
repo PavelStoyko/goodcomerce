@@ -17,11 +17,11 @@
                                     <div class="form_content">
                                         <div class="form_group">
                                             <span class="label_form">How much funding do you need?</span>
-                                            <input id="funding" type="text" class="form-control form_text" aria-required="true" aria-invalid="false" placeholder="KES">
+                                            <input id="funding" name="funding" type="number" class="form-control form_text" required aria-invalid="false" placeholder="KES" max="{{$maxPrice}}" onchange="changFunding()" >
                                         </div>
                                         <div class="form_group">
                                             <span class="label_form">How much money will you be investing?</span>
-                                            <input id="investing" type="text" class="form-control form_text" aria-required="true" aria-invalid="false" placeholder="KES">
+                                            <input id="investing" type="number" class="form-control form_text" required aria-invalid="false" placeholder="KES" max="{{$maxPrice}}" onchange="changInvest()">
                                         </div>
                                         <div class="form_group">
                                             <span class="label_form">Source of funding?</span>
@@ -37,28 +37,28 @@
                                             <div class="plan_wrap">
                                                 <table class="plan_info">
                                                     <thead>
-                                                    <tr class="tr_info">
-                                                        <th class="first_th">Instalment</th>
-                                                        <th>Amount</th>
-                                                        <th>Due date</th>
-                                                    </tr>
+                                                        <tr class="tr_info">
+                                                            <th class="first_th">Instalment</th>
+                                                            <th>Amount</th>
+                                                            <th>Due date</th>
+                                                        </tr>
                                                     </thead>
                                                     <tbody>
-                                                    <tr>
-                                                        <td>Instalment</td>
-                                                        <td id="first"></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Instalment</td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Instalment</td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
+                                                        <tr>
+                                                            <td>Instalment</td>
+                                                            <td id="first" style="text-align: center;"></td>
+                                                            <td id="second" style="text-align: center;"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Instalment</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Instalment</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -86,7 +86,7 @@
                                         </div>
                                         <div class="form_group check">
                                             <label>
-                                                <input type="checkbox" class="checkbox" name="agree" aria-required="true" aria-invalid="false">
+                                                <input type="checkbox" class="checkbox" name="agree" required aria-invalid="false">
                                                 <span class="checkbox-custom"></span>
                                                 <span class="label_check">I have read and agreed to the <a href="#" class="privacy_link">Terms of service</a></span>
                                             </label>
@@ -113,5 +113,21 @@
             </div>
         </div>
     </main>
+    <script>
+       function changFunding(){
+           var funding = $("#funding").val();
+           funding = funding/{{$business->repayment}};
+           funding = parseInt(funding);
+           $(".plan_info td:nth-child(2)").empty().append(funding);
+           var today = new Date();
+           var date = today.getDate()+'-'+(today.getMonth()+2)+'-'+today.getFullYear();
+           $(".plan_info td:nth-child(3) ").empty().append(date);
+        }
 
+        function changInvest(){
+
+
+        }
+
+    </script>
 @endsection

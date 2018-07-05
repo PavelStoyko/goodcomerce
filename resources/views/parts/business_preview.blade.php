@@ -1,4 +1,4 @@
-<div class="profit_item">
+<div class="profit_item js-business-preview">
     <div class="profit_thumbnail">
         <img src="{{$business->photo}}" alt="{{$business->title}}">
     </div>

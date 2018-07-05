@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="form_group {{ $errors->has('password') ? ' has-error' : '' }}">
                                     <span class="label_form">Password</span>
-                                    <input type="password" name="password" class="form-control form_text" required aria-invalid="false">
+                                    <input id="showPass" type="password" name="password" class="form-control form_text" required aria-invalid="false">
 
                                     @if ($errors->has('password'))
                                         <span class="help-block">
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="form_group check">
                                     <label>
-                                        <input type="checkbox" class="checkbox" name="show_password" aria-required="true" aria-invalid="false">
+                                        <input type="checkbox" class="checkbox" name="show_password" aria-required="true" aria-invalid="false" onclick="showPassword()">
                                         <span class="checkbox-custom"></span>
                                         <span class="label_check">Show password</span>
                                     </label>

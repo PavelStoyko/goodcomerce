@@ -30,23 +30,23 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Image","name"=>"image","image"=>true,"width"=>"50"];
-			$this->col[] = ["label"=>"Url","name"=>"url","width"=>"50"];
-			$this->col[] = ["label"=>"Is Enabled","name"=>"is_enabled","width"=>"50"];
+			$this->col[] = ["label"=>"Image","name"=>"image","image"=>true,"width"=>"200"];
+			$this->col[] = ["label"=>"Url","name"=>"url","width"=>"200"];
+			$this->col[] = ["label"=>"Is Enabled","name"=>"is_enabled","width"=>"200"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Image','name'=>'image','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			$this->form[] = ['label'=>'Url','name'=>'url','type'=>'text','validation'=>'required|url','width'=>'col-sm-10','placeholder'=>'Please enter a valid URL'];
-			$this->form[] = ['label'=>'Is Enabled','name'=>'is_enabled','type'=>'checkbox','validation'=>'required|bool','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Is Enabled','name'=>'is_enabled','type'=>'radio','dataenum'=>'1|yes;0|no', 'validation'=>'required','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ['label'=>'Image','name'=>'image','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			//$this->form[] = ['label'=>'Url','name'=>'url','type'=>'text','validation'=>'required|url','width'=>'col-sm-10','placeholder'=>'Please enter a valid URL'];
-			//$this->form[] = ['label'=>'Is Enabled','name'=>'is_enabled','type'=>'checkbox','validation'=>'required|bool','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Is Enabled','name'=>'is_enabled','type'=>'radio','validation'=>'required|bool','width'=>'col-sm-10'];
 			# OLD END FORM
 
 			/* 

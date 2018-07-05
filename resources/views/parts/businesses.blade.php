@@ -18,16 +18,25 @@
                 <div class="most_nav">
                     <a href="#" class="post-link">Business opportunities</a>
                 </div>
-                <div class="posts_content">
+                <div class="posts_content js-businesses-container">
                     @foreach($businesses as $business)
                         @include ('parts.business_preview', ['business' => $business])
                     @endforeach
                 </div>
-                <div class="bottom-action">
-                    <a href="#" class="sign-btn load-more">load more</a>
-                </div>
+
+                @if($count > count($businesses))
+
+                    <div class="bottom-action js-load-more-businesses-button-container">
+                        <a href="#" class="sign-btn load-more js-load-more-businesses-button">load more</a>
+                    </div>
+
+                @endif
+
             </div>
         </div>
     </div>
 </main>
+
+
+
     @endsection

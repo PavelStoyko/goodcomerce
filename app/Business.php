@@ -49,11 +49,28 @@ class Business extends Model
              (
                 select businesses.cost - IF(SUM(payments.cost), SUM(payments.cost), 0) from payments join orders on orders.id = payments.order_id where orders.business_id = businesses.id 
              ) as credit")
-                    )->having('credit', '>', 0);
+        )->having('credit', '>', 0);
     }
 
     public function getPhotoAttribute($value)
     {
         return $value ? asset($value) : null;
+    }
+
+    public static function getActiveCount()
+    {
+
+        $result = DB::select("select count(id) as businesses_count from (select `businesses`.id,
+         ( select businesses.cost - IF(SUM(payments.cost), SUM(payments.cost), 0) from payments join orders on orders.id = payments.order_id where orders.business_id = businesses.id ) as credit 
+         from `businesses` having `credit` > 0) as businesses_temp");
+
+        return $result[0]->businesses_count;
+    }
+
+    public static function getMaxPrice($id)
+    {
+        $maxPrice = DB::select("SELECT cost as maxPrice FROM businesses where id=$id;");
+        $maxPrice = $maxPrice[0]->maxPrice;
+        return $maxPrice;
     }
 }
