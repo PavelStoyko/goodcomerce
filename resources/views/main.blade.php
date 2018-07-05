@@ -27,6 +27,12 @@
             $( "#tabs" ).tabs();
         } );
     </script>
+    <style>
+        .ui-state-active>a
+        {
+            color:#0056b3;
+        }
+    </style>
 </head>
 <body>
 

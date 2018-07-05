@@ -40,18 +40,17 @@
                     </ul>
                     @if(Auth::guest())
                     <a href="{{route('login')}}" class="sign-btn">sign in</a>
-                        @else <a class="sign-btn" href="{{ route('logout') }}"
-                                 onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                        {{Auth::user()->name}}
-                    </a>
+                    @else   <a class="sign-btn" href="{{ route('logout') }}"
+                                     onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                                    Log Out
+                            </a>
+                            <a class="sign-btn" href="{{url('/businesses')}}">{{Auth::user()->name}}</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-
-                        {{--<a href="{{route('logout')}}" class="sign-btn">{{Auth::user()->name}}</a>--}}
-                        @endif
+                    @endif
                 </div>
             </div>
         </div>

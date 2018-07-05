@@ -47,7 +47,23 @@ class BusinessesController extends Controller
     {
         $business = Business::find($id);
         if(Auth::guest()) return redirect('login');
-        else return view('parts.show_business', ['business' => $business]);
+        else
+        {
+            if($business->id) return view('parts.show_business', ['business' => $business]);
+            else return abort(404);
+        }
+
+    }
+
+    public function startBusiness($id)
+    {
+        $business = Business::find($id);
+        if(Auth::guest()) return redirect('login');
+        else
+        {
+            if($business->id) return view('parts.start_business', ['business' => $business]);
+            else return abort(404);
+        }
     }
 
 

@@ -18,6 +18,7 @@ class Business extends Model
         'photo',
         'name',
         'description',
+        'targetMarket',
         'cost',
         'discount',
         'interest',
