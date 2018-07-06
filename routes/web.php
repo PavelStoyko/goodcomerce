@@ -13,10 +13,10 @@
 
 Route::get('/', 'BusinessesController@index');
 Route::get('/businesses', 'BusinessesController@show')->middleware('auth');
-Route::get('/business/start/{id}', 'BusinessesController@startBusiness')->middleware('auth');;
+Route::get('/business/start/{id}', 'BusinessesController@startBusiness')->middleware('auth');
 Route::get('/business/{id}', 'BusinessesController@viewBusiness')->middleware('auth');
 
-
+Route::resource('orders', 'OrdersController');
 
 
 Auth::routes();

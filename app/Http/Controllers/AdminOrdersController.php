@@ -35,6 +35,7 @@
 			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"10"];
 			$this->col[] = ["label"=>"Interest","name"=>"interest","width"=>"100"];
 			$this->col[] = ["label"=>"Terms","name"=>"terms","width"=>"100"];
+			$this->col[] = ["label"=>"Created At","name"=>"created_at","width"=>"100"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE

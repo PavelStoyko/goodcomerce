@@ -12,6 +12,9 @@ class Order extends Model
         'cost',
         'interest',
         'terms',
+        'funding',
+        'investing',
+        'payment_method',
     ];
 
     public function user()

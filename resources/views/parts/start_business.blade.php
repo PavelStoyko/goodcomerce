@@ -13,15 +13,17 @@
                     <div class="col-xl-8 col-lg-8">
                         <div class="sanergy_fields">
                             <div class="sanergy_form">
-                                <form action="#" class="form">
+                                {{--<form action="#" class="form" method="post">--}}
+                                <form action="{{url('orders')}}" class="form" method="post">
+                                    {{ csrf_field() }}
                                     <div class="form_content">
                                         <div class="form_group">
                                             <span class="label_form">How much funding do you need?</span>
-                                            <input id="funding" name="funding" type="number" class="form-control form_text" required aria-invalid="false" placeholder="KES" max="{{$maxPrice}}" onchange="changFunding()" >
+                                            <input id="funding" name="funding" type="number" class="form-control form_text" required aria-invalid="false" placeholder="KES {{$maxPrice}}" max="{{$maxPrice}}" onchange="changeFunding()" >
                                         </div>
                                         <div class="form_group">
                                             <span class="label_form">How much money will you be investing?</span>
-                                            <input id="investing" type="number" class="form-control form_text" required aria-invalid="false" placeholder="KES" max="{{$maxPrice}}" onchange="changInvest()">
+                                            <input id="investing" type="number" class="form-control form_text" required aria-invalid="false" placeholder="KES {{$maxPrice}}" max="{{$maxPrice}}" onchange="changeInvest()">
                                         </div>
                                         <div class="form_group">
                                             <span class="label_form">Source of funding?</span>
@@ -46,16 +48,6 @@
                                                     <tbody>
                                                         <tr>
                                                             <td>Instalment</td>
-                                                            <td id="first" style="text-align: center;"></td>
-                                                            <td id="second" style="text-align: center;"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Instalment</td>
-                                                            <td></td>
-                                                            <td></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Instalment</td>
                                                             <td></td>
                                                             <td></td>
                                                         </tr>
@@ -68,7 +60,7 @@
                                             <div class="radio_wrap">
                                                 <div class="radio_check">
                                                     <label>
-                                                        <input class="radio" type="radio" name="radio-test">
+                                                        <input class="radio" type="radio" name="radio-test" value="Mpesa">
                                                         <span class="radio-custom"></span>
                                                         <span class="label_check">Mpesa</span>
                                                     </label>
@@ -76,7 +68,7 @@
                                                 </div>
                                                 <div class="radio_check">
                                                     <label>
-                                                        <input class="radio" type="radio" name="radio-test">
+                                                        <input class="radio" type="radio" name="radio-test" value="Card">
                                                         <span class="radio-custom"></span>
                                                         <span class="label_check">Card</span>
                                                     </label>
@@ -92,7 +84,7 @@
                                             </label>
                                         </div>
                                         <div class="form_actions">
-                                            <input type="submit" class="btn btn-start" value="confirm investment">
+                                            <input type="submit" class="btn btn-start btn-confirm-investment" value="confirm investment">
                                         </div>
                                     </div>
                                 </form>
@@ -114,20 +106,11 @@
         </div>
     </main>
     <script>
-       function changFunding(){
-           var funding = $("#funding").val();
-           funding = funding/{{$business->repayment}};
-           funding = parseInt(funding);
-           $(".plan_info td:nth-child(2)").empty().append(funding);
-           var today = new Date();
-           var date = today.getDate()+'-'+(today.getMonth()+2)+'-'+today.getFullYear();
-           $(".plan_info td:nth-child(3) ").empty().append(date);
-        }
-
-        function changInvest(){
-
-
-        }
+        var repayment = {{$business->repayment}};
+        var cost = {{$business->cost}};
+        var interest =  {{$business->interest}};
+        var discount =  {{$business->discount}};
+        if(interest>discount) {var finalInterest = (interest-discount)/100;}
 
     </script>
 @endsection
