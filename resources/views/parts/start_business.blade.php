@@ -24,7 +24,7 @@
                                         </div>
                                         <div class="form_group">
                                             <span class="label_form">How much money will you be investing?</span>
-                                            <input id="investing" type="number" class="form-control form_text" required aria-invalid="false" placeholder="KES {{$maxPrice}}" max="{{$maxPrice}}" onchange="changeInvest()">
+                                            <input id="investing" type="number" class="form-control form_text" required aria-invalid="false" placeholder="KES {{$maxPrice}}" max="{{$maxPrice}}">
                                         </div>
                                         <div class="form_group">
                                             <span class="label_form">Source of funding?</span>
@@ -107,11 +107,12 @@
         </div>
     </main>
     <script>
-        var repayment = {{$business->repayment}};
-        var cost = {{$business->cost}};
-        var interest =  {{$business->interest}};
-        var discount =  {{$business->discount}};
-        if(interest>discount) {var finalInterest = (interest-discount)/100;}
+
+        var repayment = +{{$business->repayment}};
+        var cost = +{{$business->cost}};
+        var interest =  +{{$business->interest}};
+        var discount =  +{{$business->discount}}/100;
+        var finalInterest = interest/100;
 
     </script>
 @endsection
