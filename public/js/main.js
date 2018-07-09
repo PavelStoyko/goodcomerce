@@ -52,18 +52,18 @@ function showPassword()
 /*script for start business*/
 function changeFunding(){
 
-    var funding = $("#funding").val();
-    if(funding>cost) {alert('You can not loan more than'+cost); return;}
+    var funding_var = $("#funding_var").val();
+    if(funding_var>cost) {alert('You can not loan more than'+cost); return;}
 
-    if(funding<repayment) {var count=funding;}
+    if(funding_var<repayment) {var count=funding_var;}
     else {count=repayment;}
 
-    funding = parseInt(funding)+(funding*finalInterest);
+    funding_var = parseInt(funding_var)+(funding_var*finalInterest);
 
-    if(count){funding=funding/count;}
-    else funding=funding/repayment;
+    if(count){funding_var=funding_var/count;}
+    else funding_var=funding_var/repayment;
 
-    funding = Math.round(funding*100)/100;
+    funding_var = Math.round(funding_var*100)/100;
 
     var today = new Date();
     $(".plan_info tbody tr").remove();
@@ -83,7 +83,7 @@ function changeFunding(){
         var date = today.getDate()+'-'+(month)+'-'+year;
 
 
-        $(".plan_info").append("<tr><td>Instalment -    "+(i+1)+"</td><td>"+funding+"</td><td>"+date+"</td></tr>");
+        $(".plan_info").append("<tr><td>Instalment -    "+(i+1)+"</td><td>"+funding_var+"</td><td>"+date+"</td></tr>");
     }
 
 }
