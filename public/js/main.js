@@ -58,13 +58,10 @@ function changeFunding(){
     if(funding_var<repayment) {var count=funding_var;}
     else {count=repayment;}
 
-    funding_var = parseInt(funding_var)+(funding_var*finalInterest);
-
+    funding_var = parseInt(funding_var)+parseInt(funding_var*finalInterest);
     if(count){funding_var=funding_var/count;}
     else funding_var=funding_var/repayment;
-
     funding_var = Math.round(funding_var*100)/100;
-
     var today = new Date();
     $(".plan_info tbody tr").remove();
     var month = today.getMonth();
