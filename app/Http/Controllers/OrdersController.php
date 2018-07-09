@@ -50,7 +50,7 @@ class OrdersController extends Controller
 
         $order->save();
 
-        return redirect('/');
+        return redirect('/')->with('message', 'THANK YOU FOR YOU CHOICE, WE WILL CONTACT YOU DURING 24h!');
 
     }
 

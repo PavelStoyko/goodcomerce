@@ -9,7 +9,7 @@
                         </a>
                     </div>
                     <div class="socials_links">
-                        <a href="https://www.facebook.com/" target="_blank" class="social_link"><img src="{{url('img/facebook.png')}}" alt=""></a>
+                        <a href="" target="_blank" class="social_link"><img src="{{url('img/facebook.png')}}" alt=""></a>
                         <a href="https://twitter.com" target="_blank" class="social_link"><img src="{{url('img/twitter.png')}}" alt=""></a>
                         <a href="https://plus.google.com" target="_blank" class="social_link"><img src="{{url('img/google-plus.png')}}" alt=""></a>
                     </div>

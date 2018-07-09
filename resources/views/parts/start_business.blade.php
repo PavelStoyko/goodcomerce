@@ -13,7 +13,6 @@
                     <div class="col-xl-8 col-lg-8">
                         <div class="sanergy_fields">
                             <div class="sanergy_form">
-                                {{--<form action="#" class="form" method="post">--}}
                                 <form action="{{url('orders')}}" class="form" method="post">
                                     {{ csrf_field() }}
                                     <div class="form_content">

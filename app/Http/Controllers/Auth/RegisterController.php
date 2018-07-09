@@ -104,7 +104,7 @@ class RegisterController extends Controller
         $user = User::where('email', $socialUser->getEmail())->first();
 
         if(!$user)
-            User::create([
+            $user = User::create([
 
                 'name'=>$socialUser->getName(),
                 'email'=>$socialUser->getEmail(),

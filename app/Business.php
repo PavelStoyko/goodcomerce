@@ -47,7 +47,7 @@ class Business extends Model
             'businesses.*',
             DB::raw("
              (
-                select businesses.cost - IF(SUM(payments.cost), SUM(payments.cost), 0) from payments join orders on orders.id = payments.order_id where orders.business_id = businesses.id 
+                select businesses.cost - IF(SUM(orders.cost), SUM(orders.cost), 0) from orders where orders.business_id = businesses.id 
              ) as credit")
         )->having('credit', '>', 0);
     }

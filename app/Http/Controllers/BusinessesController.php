@@ -14,7 +14,6 @@ class BusinessesController extends Controller
     public function index()
     {
 
-
         $limit = 6;
 
         $mostPopular = Business::selectData()->withCount(['orders'])->orderBy('orders_count', 'desc')->limit($limit)->get();

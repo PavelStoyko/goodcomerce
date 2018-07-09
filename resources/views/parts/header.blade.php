@@ -7,6 +7,12 @@
                         <img src="{{url('img/logo.png')}}" alt="Goodcommerce logo">
                     </a>
                 </div>
+
+                @if(session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session()->get('message') }}
+                    </div>
+                @endif
                 <div class="top_nav">
                     <ul class="menu-list">
                         <li class="menu-item">
