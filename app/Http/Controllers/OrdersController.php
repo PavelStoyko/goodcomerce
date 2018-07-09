@@ -6,6 +6,7 @@ use App\Business;
 use App\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Bus;
 
 class OrdersController extends Controller
 {
@@ -37,12 +38,10 @@ class OrdersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Business $business)
     {
-//        dd($business);
-
         $order = new Order($request->all());
-//        $order->business_id = $business->id();
+        $order->business_id = $_POST['business_id'];
         $order->user_id = Auth::user()->id;
         $order->funding = $request->input('funding');
         $order->investing = $request->input('investing');

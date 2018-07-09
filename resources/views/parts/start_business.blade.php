@@ -20,6 +20,7 @@
                                         <div class="form_group">
                                             <span class="label_form">How much funding do you need?</span>
                                             <input id="funding" name="funding" type="number" class="form-control form_text" required aria-invalid="false" placeholder="KES {{$maxPrice}}" max="{{$maxPrice}}" onchange="changeFunding()" >
+                                            <input type="text" id="business_id" name="business_id" hidden value="{{$business->id}}">
                                         </div>
                                         <div class="form_group">
                                             <span class="label_form">How much money will you be investing?</span>
