@@ -50,7 +50,7 @@
 			$this->form[] = ['label'=>'Discount','name'=>'discount','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
 			$this->form[] = ['label'=>'Interest','name'=>'interest','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
 			$this->form[] = ['label'=>'Roi','name'=>'roi','type'=>'number','validation'=>'required|integer|min:1','width'=>'col-sm-5'];
-			$this->form[] = ['label'=>'Repayment','name'=>'repayment','type'=>'number','validation'=>'required|integer|min:6','width'=>'col-sm-5'];
+			$this->form[] = ['label'=>'Repayment','name'=>'repayment','type'=>'select', 'dataenum'=>'1|1 month;3|3 month; 6|6 month; 9|9 month; 12|12 month', 'validation'=>'required|integer|min:1|max:12','width'=>'col-sm-5'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
