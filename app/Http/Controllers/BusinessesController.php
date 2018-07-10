@@ -24,10 +24,17 @@ class BusinessesController extends Controller
 
         $lives_impact = DB::table('cms_settings')->where('name', 'lives_impacted')->first()->content;
 
+        $facebook = DB::table('socials')->where('id', '1')->first();
+        $twitter = DB::table('socials')->where('id', '2')->first();
+        $google = DB::table('socials')->where('id', '3')->first();
+
         return view('main', [     'mostPopular' => $mostPopular,
                                         'mostProfitable' => $mostProfitable,
                                         'jobs_created' => $jobs_created,
-                                        'lives_impact' => $lives_impact
+                                        'lives_impact' => $lives_impact,
+                                        'facebook' => $facebook,
+                                        'twitter' => $twitter,
+                                        'google' => $google
             ]);
 
 

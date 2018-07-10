@@ -30,14 +30,14 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Photo","name"=>"photo","image"=>true,"width"=>"200"];
+			$this->col[] = ["label"=>"Photo","name"=>"photo","image"=>true,"width"=>"100"];
 			$this->col[] = ["label"=>"Name","name"=>"name","width"=>"100"];
 			$this->col[] = ["label"=>"Description","name"=>"description","width"=>"400"];
 			$this->col[] = ["label"=>"TargetMarket","name"=>"targetMarket","width"=>"400"];
-			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"20"];
-			$this->col[] = ["label"=>"Discount","name"=>"discount","width"=>"20"];
-			$this->col[] = ["label"=>"Interest","name"=>"interest","width"=>"20"];
-			$this->col[] = ["label"=>"Roi","name"=>"roi","width"=>"20"];
+			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"100"];
+			$this->col[] = ["label"=>"Discount","name"=>"discount","width"=>"100"];
+			$this->col[] = ["label"=>"Interest","name"=>"interest","width"=>"100"];
+			$this->col[] = ["label"=>"Roi","name"=>"roi","width"=>"100"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -50,20 +50,20 @@
 			$this->form[] = ['label'=>'Discount','name'=>'discount','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
 			$this->form[] = ['label'=>'Interest','name'=>'interest','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
 			$this->form[] = ['label'=>'Roi','name'=>'roi','type'=>'number','validation'=>'required|integer|min:1','width'=>'col-sm-5'];
-			$this->form[] = ['label'=>'Repayment','name'=>'repayment','type'=>'select', 'dataenum'=>'1|1 month;3|3 month; 6|6 month; 9|9 month; 12|12 month', 'validation'=>'required|integer|min:1|max:12','width'=>'col-sm-5'];
+			$this->form[] = ['label'=>'Repayment','name'=>'repayment','type'=>'select','validation'=>'required|integer|min:1|max:12','width'=>'col-sm-5','dataenum'=>'1|1 month;3|3 month; 6|6 month; 9|9 month; 12|12 month'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			//$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-5','placeholder'=>'You can only enter the letter only'];
-			//$this->form[] = ['label'=>'Description','name'=>'description','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-8'];
-			//$this->form[] = ['label'=>'TargetMarket','name'=>'targetMarket','type'=>'textarea','validation'=>'required','width'=>'col-sm-9'];
+			//$this->form[] = ['label'=>'Description','name'=>'description','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-5'];
+			//$this->form[] = ['label'=>'TargetMarket','name'=>'targetMarket','type'=>'textarea','validation'=>'required','width'=>'col-sm-5'];
 			//$this->form[] = ['label'=>'Cost','name'=>'cost','type'=>'number','validation'=>'required|min:1','width'=>'col-sm-5'];
 			//$this->form[] = ['label'=>'Discount','name'=>'discount','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
 			//$this->form[] = ['label'=>'Interest','name'=>'interest','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
 			//$this->form[] = ['label'=>'Roi','name'=>'roi','type'=>'number','validation'=>'required|integer|min:1','width'=>'col-sm-5'];
-			//$this->form[] = ['label'=>'Repayment','name'=>'repayment','type'=>'number','validation'=>'required|integer|min:6','width'=>'col-sm-5'];
+			//$this->form[] = ['label'=>'Repayment','name'=>'repayment','type'=>'select','validation'=>'required|integer|min:1|max:12','width'=>'col-sm-5','dataenum'=>'1|1 month;3|3 month; 6|6 month; 9|9 month; 12|12 month'];
 			# OLD END FORM
 
 			/* 

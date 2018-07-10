@@ -30,10 +30,10 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Order Id","name"=>"order_id","join"=>"orders,id","width"=>"10"];
-			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"10"];
-			$this->col[] = ["label"=>"Payment Date","name"=>"payment_date","width"=>"10"];
-			$this->col[] = ["label"=>"Type","name"=>"type","width"=>"20"];
+			$this->col[] = ["label"=>"Order Id","name"=>"order_id","join"=>"orders,id","width"=>"100"];
+			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"100"];
+			$this->col[] = ["label"=>"Payment Date","name"=>"payment_date","width"=>"200"];
+			$this->col[] = ["label"=>"Type","name"=>"type","width"=>"200"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -46,7 +46,7 @@
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Order Id','name'=>'order_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'order,id'];
+			//$this->form[] = ['label'=>'Order Id','name'=>'order_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'orders,id'];
 			//$this->form[] = ['label'=>'Cost','name'=>'cost','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Payment Date','name'=>'payment_date','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Type','name'=>'type','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];

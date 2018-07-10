@@ -38,13 +38,27 @@
                 </div>
                 <div class="stat_item">
                     <span class="stat_description">
-                        <strong>{{$jobs_created}}</strong>
+                        <strong>
+                            @if ($jobs_created >=1000 && $jobs_created<1000000)
+                                {{$jobs_created/1000}}k
+                            @elseif($jobs_created>=1000000)
+                                {{$jobs_created/1000000}}M
+                            @else {{$jobs_created}}
+                            @endif
+                        </strong>
                         jobs created
                     </span>
                 </div>
                 <div class="stat_item">
                     <span class="stat_description">
-                        <strong>{{$lives_impact}}</strong>
+                        <strong>
+                             @if ($lives_impact >=1000 && $lives_impact<1000000)
+                                {{$lives_impact/1000}}k
+                            @elseif($lives_impact>=1000000)
+                                {{$lives_impact/1000000}}M
+                            @else {{$lives_impact}}
+                            @endif
+                        </strong>
                         lives impacted
                     </span>
                 </div>

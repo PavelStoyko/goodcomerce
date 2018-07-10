@@ -9,9 +9,9 @@
                         </a>
                     </div>
                     <div class="socials_links">
-                        <a href="" target="_blank" class="social_link"><img src="{{url('img/facebook.png')}}" alt=""></a>
-                        <a href="https://twitter.com" target="_blank" class="social_link"><img src="{{url('img/twitter.png')}}" alt=""></a>
-                        <a href="https://plus.google.com" target="_blank" class="social_link"><img src="{{url('img/google-plus.png')}}" alt=""></a>
+                       @if($facebook->is_enabled) <a href="{{$facebook->url}}" target="_blank" class="social_link"><img src="{{url($facebook->image)}}" alt="facebook"></a>@endif
+                       @if($twitter->is_enabled)<a href="{{$twitter->url}}" target="_blank" class="social_link"><img src="{{url($twitter->image)}}" alt=""></a>@endif
+                       @if($google->is_enabled)<a href="{{$google->url}}" target="_blank" class="social_link"><img src="{{url($google->image)}}" alt=""></a>@endif
                     </div>
                 </div>
                 <div class="footer_wrap">

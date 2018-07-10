@@ -30,12 +30,12 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Business Id","name"=>"business_id","join"=>"businesses,id","width"=>"10"];
-			$this->col[] = ["label"=>"User","name"=>"user_id","join"=>"users,id","width"=>"10"];
-			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"10"];
+			$this->col[] = ["label"=>"Business Id","name"=>"business_id","join"=>"businesses,id","width"=>"100"];
+			$this->col[] = ["label"=>"User","name"=>"user_id","join"=>"users,id","width"=>"100"];
+			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"100"];
 			$this->col[] = ["label"=>"Interest","name"=>"interest","width"=>"100"];
 			$this->col[] = ["label"=>"Terms","name"=>"terms","width"=>"100"];
-			$this->col[] = ["label"=>"Created At","name"=>"created_at","width"=>"100"];
+			$this->col[] = ["label"=>"Created At","name"=>"created_at","width"=>"200"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -49,8 +49,8 @@
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Business Id','name'=>'business_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'business,id'];
-			//$this->form[] = ['label'=>'User Id','name'=>'user_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'user,id'];
+			//$this->form[] = ['label'=>'Business Id','name'=>'business_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'businesses,name'];
+			//$this->form[] = ['label'=>'User Id','name'=>'user_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'users,name'];
 			//$this->form[] = ['label'=>'Cost','name'=>'cost','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Interest','name'=>'interest','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Terms','name'=>'terms','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];

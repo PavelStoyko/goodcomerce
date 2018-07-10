@@ -17,9 +17,9 @@
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
 			$this->button_action_style = "button_icon";
-			$this->button_add = true;
+			$this->button_add = false;
 			$this->button_edit = true;
-			$this->button_delete = true;
+			$this->button_delete = false;
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
@@ -39,14 +39,14 @@
 			$this->form = [];
 			$this->form[] = ['label'=>'Image','name'=>'image','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			$this->form[] = ['label'=>'Url','name'=>'url','type'=>'text','validation'=>'required|url','width'=>'col-sm-10','placeholder'=>'Please enter a valid URL'];
-			$this->form[] = ['label'=>'Is Enabled','name'=>'is_enabled','type'=>'radio','dataenum'=>'1|yes;0|no', 'validation'=>'required','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Is Enabled','name'=>'is_enabled','type'=>'radio','validation'=>'required','width'=>'col-sm-10','dataenum'=>'1|yes;0|no'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ['label'=>'Image','name'=>'image','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			//$this->form[] = ['label'=>'Url','name'=>'url','type'=>'text','validation'=>'required|url','width'=>'col-sm-10','placeholder'=>'Please enter a valid URL'];
-			//$this->form[] = ['label'=>'Is Enabled','name'=>'is_enabled','type'=>'radio','validation'=>'required|bool','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Is Enabled','name'=>'is_enabled','type'=>'radio','dataenum'=>'1|yes;0|no', 'validation'=>'required','width'=>'col-sm-10'];
 			# OLD END FORM
 
 			/* 
