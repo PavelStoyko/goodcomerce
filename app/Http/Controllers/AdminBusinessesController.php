@@ -32,12 +32,13 @@
 			$this->col = [];
 			$this->col[] = ["label"=>"Photo","name"=>"photo","image"=>true,"width"=>"100"];
 			$this->col[] = ["label"=>"Name","name"=>"name","width"=>"100"];
-			$this->col[] = ["label"=>"Description","name"=>"description","width"=>"400"];
-			$this->col[] = ["label"=>"TargetMarket","name"=>"targetMarket","width"=>"400"];
+			$this->col[] = ["label"=>"Description","name"=>"description","width"=>"300"];
+			$this->col[] = ["label"=>"TargetMarket","name"=>"targetMarket","width"=>"300"];
 			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"100"];
 			$this->col[] = ["label"=>"Discount","name"=>"discount","width"=>"100"];
 			$this->col[] = ["label"=>"Interest","name"=>"interest","width"=>"100"];
 			$this->col[] = ["label"=>"Roi","name"=>"roi","width"=>"100"];
+			$this->col[] = ["label"=>"Short Description","name"=>"short_description","width"=>"200"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -51,6 +52,7 @@
 			$this->form[] = ['label'=>'Interest','name'=>'interest','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
 			$this->form[] = ['label'=>'Roi','name'=>'roi','type'=>'number','validation'=>'required|integer|min:1','width'=>'col-sm-5'];
 			$this->form[] = ['label'=>'Repayment','name'=>'repayment','type'=>'select','validation'=>'required|integer|min:1|max:12','width'=>'col-sm-5','dataenum'=>'1|1 month;3|3 month; 6|6 month; 9|9 month; 12|12 month'];
+			$this->form[] = ['label'=>'Short Description','name'=>'short_description','type'=>'textarea','validation'=>'required|string|min:5|max:1000','width'=>'col-sm-5'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM

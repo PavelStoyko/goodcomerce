@@ -23,7 +23,8 @@ class Business extends Model
         'discount',
         'interest',
         'roi',
-        'repayment'
+        'repayment',
+        'short_description'
     ];
 
     /**

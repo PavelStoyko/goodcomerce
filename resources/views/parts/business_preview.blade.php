@@ -6,7 +6,7 @@
         <a href="{{url("business/{$business->id}")}}" class="prof_link">
             <h3 class="prof_title">{{$business->name}}</h3>
         </a>
-        <p class="prof_excerpt">{{$business->description}}</p>
+        <p class="prof_excerpt">{{$business->short_description}}</p>
     </div>
     <div class="price_wrap">
         <div class="price_info">COST

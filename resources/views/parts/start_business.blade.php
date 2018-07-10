@@ -97,7 +97,7 @@
                                 <img src="{{url("$business->photo")}}" alt="prof">
                             </div>
                             <div class="about_post">
-                                <p class="sanergy_excerpt">{{$business->description}}</p>
+                                <p class="sanergy_excerpt">{{$business->short_description}}</p>
                             </div>
                         </div>
                     </div>

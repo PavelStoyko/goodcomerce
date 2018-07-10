@@ -17,7 +17,7 @@
                                 <img src="{{url("$business->photo")}}" alt="">
                             </div>
                             <div class="about_text">
-                                <p class="sanergy_excerpt">{{str_limit($business->description, 200, '...')}}
+                                <p class="sanergy_excerpt">{{$business->short_description}}
                                     <span class="tags_link"><i class="fas fa-tags"></i> <a href="#" class="tag_link">Health</a>, <a href="#" class="tag_link">Energy</a></span>
                                 </p>
                             </div>
