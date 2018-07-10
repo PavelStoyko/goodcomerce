@@ -30,8 +30,8 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Business Id","name"=>"business_id","join"=>"businesses,id","width"=>"100"];
-			$this->col[] = ["label"=>"User","name"=>"user_id","join"=>"users,id","width"=>"100"];
+			$this->col[] = ["label"=>"Business Id","name"=>"business_id","join"=>"businesses,name","width"=>"100"];
+			$this->col[] = ["label"=>"User","name"=>"user_id","join"=>"users,name","width"=>"100"];
 			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"100"];
 			$this->col[] = ["label"=>"Interest","name"=>"interest","width"=>"100"];
 			$this->col[] = ["label"=>"Terms","name"=>"terms","width"=>"100"];
