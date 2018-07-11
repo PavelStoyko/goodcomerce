@@ -8,15 +8,7 @@
                     </a>
                 </div>
                 <div class="top_nav">
-                    {{--<ul class="">--}}
-                        {{--<li class="menu-item">--}}
-                            {{--<a href="#">start</a>--}}
-                        {{--</li>--}}
-                        {{--<li class="menu-item">--}}
-                            {{--<a href="#">Grow</a>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
-                    <a href="#" class="login-btn">{{Auth::user()->name}} <i class="far fa-user-circle"></i>
+                    <a href="/profileShow" class="login-btn">{{Auth::user()->name}} <i class="far fa-user-circle"></i>
                     </a>
                 </div>
             </div>
