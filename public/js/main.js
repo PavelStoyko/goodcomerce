@@ -55,16 +55,14 @@ function changeFunding(){
     var funding_var = +$("#funding").val();
     if(funding_var>cost) {alert('You can not loan more than'+cost); return;}
 
-    if(funding_var<repayment) {var count=funding_var;}
-    else {count=repayment;}
+    if(funding_var<=repayment) {var count=funding_var+1;}
+    else {count=repayment+1;}
 
     funding_var = parseInt(funding_var)+parseInt(funding_var*finalInterest);
 
     if(count){funding_var=funding_var/count;}
     else funding_var=funding_var/repayment;
     funding_var = Math.round(funding_var*100)/100;
-
-
 
     var today = new Date();
     $(".plan_info tbody tr").remove();

@@ -5,15 +5,15 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body" style="color: #0074b8;">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                 <h1>Hello user "{{Auth::user()->name}}"</h1>
-                        <h1>You are already logged in!</h1>
+                 <h1 style=" font-size: 60px;">Hello user "{{Auth::user()->name}}"</h1>
+                        <h1 style=" font-size: 60px;">You are already logged in!</h1>
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@
                     @if(Auth::guest())
                         <a href="{{route('login')}}" class="sign-btn">sign in</a>
                     @else
-                        <a class="sign-btn" href="{{url('/businesses')}}">{{Auth::user()->name}}</a>
+                        <a class="sign-btn" href="{{url('/profileShow')}}">{{Auth::user()->name}}</a>
                         <a class="sign-btn" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
