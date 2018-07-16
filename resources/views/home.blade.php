@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container" style="margin-top: 250px;">
     <div class="row">
@@ -11,9 +10,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                 <h1 style=" font-size: 60px;">Hello user "{{Auth::user()->name}}"</h1>
-                        <h1 style=" font-size: 60px;">You are already logged in!</h1>
+                        <h1 style=" font-size: 60px;"> <strong>Hello user "{{Auth::user()->name}}"</strong></h1>
+                        <h1 style=" font-size: 60px;"> <strong>You are already logged in!</strong></h1>
                 </div>
             </div>
         </div>

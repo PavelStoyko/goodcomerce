@@ -45,7 +45,7 @@ class OrdersController extends Controller
         $order->user_id = Auth::user()->id;
         $order->funding = $request->input('funding');
         $order->investing = $request->input('investing');
-        $order->cost = ($order->funding) + ($order->investing);
+        $order->cost = ($order->funding + $order->investing);
         $order->payment_method = $request->input('radio-test');
 
         $order->save();

@@ -32,7 +32,8 @@
                                 </div>
                                 <div class="price_wrap">
                                     <div class="price_info">Funding
-                                        <span class="price_item">KES 2880</span>
+                                        <span class="price_item">KES {{$business->cost -($business->ordersFunding($business->id))}}</span>
+
                                     </div>
                                     <div class="price_info">Interest
                                         <span class="price_item"> {{$business->interest}}%</span>
@@ -40,7 +41,7 @@
                                 </div>
                                 <div class="price_wrap">
                                     <div class="price_info">repayment
-                                        <span class="price_item">{{$business->repayment}} month</span>
+                                        <span class="price_item">{{$business->repayment}} months</span>
                                     </div>
                                     <div class="price_info">roi
                                         <span class="price_item">{{$business->roi}}%</span>

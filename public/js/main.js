@@ -81,7 +81,6 @@ function changeFunding(){
         month++;
         var date = today.getDate()+'-'+(month)+'-'+year;
 
-
         $(".plan_info").append("<tr><td>Instalment -    "+(i+1)+"</td><td>"+funding_var+"</td><td>"+date+"</td></tr>");
     }
 
