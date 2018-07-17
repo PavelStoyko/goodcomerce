@@ -16,11 +16,34 @@
                             <div class="profit_thumbnail">
                                 <img src="{{url("$business->photo")}}" alt="">
                             </div>
+
                             <div class="about_text">
                                 <p class="sanergy_excerpt">{{$business->short_description}}
-                                    <span class="tags_link"><i class="fas fa-tags"></i> <a href="#" class="tag_link">Health</a>, <a href="#" class="tag_link">Energy</a></span>
+
+                                    @if(count($business->tags))
+
+                                        <span class="tags_link">
+
+                                            <i class="fas fa-tags"></i>
+
+
+                                            @foreach ($business->tags as $tag)
+
+                                                <a href="{{url("businesses?tag={$tag->name}")}}" class="tag_link">{{$tag->name}}</a>,
+
+                                                @if (!$loop->last), @endif
+
+                                            @endforeach
+
+                                        </span>
+
+                                    @endif
+
                                 </p>
                             </div>
+
+
+
                             <div class="pricing_wrapper">
                                 <div class="price_wrap">
                                     <div class="price_info">STARTUP COST

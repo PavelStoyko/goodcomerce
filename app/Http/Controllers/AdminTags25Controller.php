@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminBusinessesController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminTags25Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -25,49 +25,22 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "businesses";
+			$this->table = "tags";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Photo","name"=>"photo","image"=>true,"width"=>"100"];
-			$this->col[] = ["label"=>"Name","name"=>"name","width"=>"100"];
-			$this->col[] = ["label"=>"Description","name"=>"description","width"=>"300"];
-			$this->col[] = ["label"=>"TargetMarket","name"=>"targetMarket","width"=>"300"];
-			$this->col[] = ["label"=>"Cost","name"=>"cost","width"=>"100"];
-			$this->col[] = ["label"=>"Discount","name"=>"discount","width"=>"100"];
-			$this->col[] = ["label"=>"Interest","name"=>"interest","width"=>"100"];
-			$this->col[] = ["label"=>"Roi","name"=>"roi","width"=>"100"];
-			$this->col[] = ["label"=>"Short Description","name"=>"short_description","width"=>"200"];
+			$this->col[] = ["label"=>"Name","name"=>"name"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
-			$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-5','placeholder'=>'You can only enter the letter only'];
-			$this->form[] = ['label'=>'Description','name'=>'description','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-5'];
-			$this->form[] = ['label'=>'TargetMarket','name'=>'targetMarket','type'=>'textarea','validation'=>'required','width'=>'col-sm-5'];
-			$this->form[] = ['label'=>'Cost','name'=>'cost','type'=>'number','validation'=>'required|min:1','width'=>'col-sm-5'];
-			$this->form[] = ['label'=>'Discount','name'=>'discount','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
-			$this->form[] = ['label'=>'Interest','name'=>'interest','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
-			$this->form[] = ['label'=>'Roi','name'=>'roi','type'=>'number','validation'=>'required|integer|min:1','width'=>'col-sm-5'];
-			$this->form[] = ['label'=>'Repayment','name'=>'repayment','type'=>'select','validation'=>'required|integer|min:1|max:12','width'=>'col-sm-5','dataenum'=>'1|1 month;3|3 month; 6|6 month; 9|9 month; 12|12 month'];
-			$this->form[] = ['label'=>'Short Description','name'=>'short_description','type'=>'textarea','validation'=>'required|string|min:5|max:1000','width'=>'col-sm-5'];
-//            $this->form[] = ['label'=>'tag', 'name'=>'tag', 'type'=>'select2','datatable'=>'tags,name','relationship_table'=>'business_tag', 'width'=>'col-sm-5'];
-
+			$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
-			//$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-5','placeholder'=>'You can only enter the letter only'];
-			//$this->form[] = ['label'=>'Description','name'=>'description','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-5'];
-			//$this->form[] = ['label'=>'TargetMarket','name'=>'targetMarket','type'=>'textarea','validation'=>'required','width'=>'col-sm-5'];
-			//$this->form[] = ['label'=>'Cost','name'=>'cost','type'=>'number','validation'=>'required|min:1','width'=>'col-sm-5'];
-			//$this->form[] = ['label'=>'Discount','name'=>'discount','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
-			//$this->form[] = ['label'=>'Interest','name'=>'interest','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-5'];
-			//$this->form[] = ['label'=>'Roi','name'=>'roi','type'=>'number','validation'=>'required|integer|min:1','width'=>'col-sm-5'];
-			//$this->form[] = ['label'=>'Repayment','name'=>'repayment','type'=>'select','validation'=>'required|integer|min:1|max:12','width'=>'col-sm-5','dataenum'=>'1|1 month;3|3 month; 6|6 month; 9|9 month; 12|12 month'];
+			//$this->form[] = ["label"=>"Name","name"=>"name","type"=>"text","required"=>TRUE,"validation"=>"required|string|min:3|max:70","placeholder"=>"You can only enter the letter only"];
 			# OLD END FORM
 
 			/* 
@@ -82,8 +55,8 @@
 			| @parent_columns = Sparate with comma, e.g : name,created_at
 	        | 
 	        */
-//	        $this->sub_module = array();
-            $this->sub_module[] = ['label'=>'Business Tag', 'name'=>'business_tag', 'path'=>'business_tag', 'button_color'=>'primary','button_icon'=>'fa fa-bars', 'foreign_key'=>'business_id', 'width'=>'col-sm-5'];
+	        $this->sub_module = array();
+
 
 	        /* 
 	        | ---------------------------------------------------------------------- 

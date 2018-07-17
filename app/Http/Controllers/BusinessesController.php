@@ -52,6 +52,7 @@ class BusinessesController extends Controller
 
         $request->validate([
             'offset' => 'nullable|integer',
+            //'tag' => 'exists:tags,name',
         ]);
 
         $limit = 6;
@@ -62,11 +63,19 @@ class BusinessesController extends Controller
             $businesses = $businesses->offset($request->input('offset'));
         }
 
+        if ($request->input('tag')){
+
+            $businesses = $businesses->join('business_tag', function ($join) use (&$request) {
+                $join->on('business_tag.business_id', '=', 'businesses.id')
+                    ->where('business_tag.tag_id', '=', DB::raw("(select id from tags where `name` = '{$request->input('tag')}')"));
+            });
+        }
+
         $businesses = $businesses->get();
 
         $responseData = [
             'businesses' => $businesses,
-            'count' => Business::getActiveCount(),
+            'count' => Business::getActiveCount($request->input('tag')),
         ];
 
         if ($request->ajax()){
@@ -88,7 +97,7 @@ class BusinessesController extends Controller
 
     public function viewBusiness($id)
     {
-        $business = Business::find($id);
+        $business = Business::with('tags')->find($id);
         if($business->id) return view('parts.show_business', ['business' => $business]);
         else return abort(404);
 
