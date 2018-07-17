@@ -58,6 +58,10 @@ function changeFunding(){
     if(funding_var<=repayment) {var count=funding_var+1;}
     else {count=repayment+1;}
 
+    // var first_pay = funding_var/10;
+    // first_pay = Math.round(first_pay*100/100);
+    // funding_var = funding_var-first_pay;
+
     funding_var = parseInt(funding_var)+parseInt(funding_var*finalInterest);
 
     if(count){funding_var=funding_var/count;}

@@ -26,13 +26,27 @@
             <div class="stats_wrap">
                 <div class="stat_item">
                     <span class="stat_description">
-                        <strong>600M</strong>
+                        <strong>
+                            @if ($invested_into_businesses >=1000 && $invested_into_businesses<1000000)
+                                {{$invested_into_businesses/1000}}k
+                            @elseif($invested_into_businesses>=1000000)
+                                {{$invested_into_businesses/1000000}}M
+                            @else {{$invested_into_businesses}}
+                            @endif
+                        </strong>
                         invested into businesses
                     </span>
                 </div>
                 <div class="stat_item">
                     <span class="stat_description">
-                        <strong>100</strong>
+                        <strong>
+                            @if ($founded_businesses >=1000 && $founded_businesses<1000000)
+                                {{$founded_businesses/1000}}k
+                            @elseif($founded_businesses>=1000000)
+                                {{$founded_businesses/1000000}}M
+                            @else {{$founded_businesses}}
+                            @endif
+                        </strong>
                         founded businesses
                     </span>
                 </div>
