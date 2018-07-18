@@ -38,25 +38,25 @@ return [
     'facebook' => [
         'client_id' => env('FB_CLIENT_ID'),
         'client_secret' => env('FB_CLIENT_SECRET'),
-        'redirect' => 'https://business.isolly.com/auth/facebook/callback',
+        'redirect' => 'https://goodcommerce.biz/auth/facebook/callback',
     ],
 
     'twitter' => [
         'client_id' => env('TWITTER_CLIENT_ID'),
         'client_secret' => env('TWITTER_CLIENT_SECRET'),
-        'redirect' => 'https://business.isolly.com/auth/twitter/callback',
+        'redirect' => 'https://goodcommerce.biz/auth/twitter/callback',
     ],
 
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'https://business.isolly.com/auth/google/callback',
+        'redirect' => 'https://goodcommerce.biz/auth/google/callback',
     ],
 
     'linkedin' => [
         'client_id' => env('LINKEDIN_CLIENT_ID'),
         'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
-        'redirect' => 'http://business.isolly.com/auth/linkedin/callback',
+        'redirect' => 'http://goodcommerce.biz/auth/linkedin/callback',
     ],
 ];
 
