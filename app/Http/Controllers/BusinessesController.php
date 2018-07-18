@@ -24,10 +24,11 @@ class BusinessesController extends Controller
 
         $lives_impact = DB::table('cms_settings')->where('name', 'lives_impacted')->first()->content;
 
-        $invested_into_businesses = DB::select("SELECT sum(cost) as invested_into_businesses from payments");
-        $invested_into_businesses = (int)$invested_into_businesses[0]->invested_into_businesses;
-        $founded_businesses = DB::select("SELECT count(*) as counted from businesses");
-        $founded_businesses = $founded_businesses[0]->counted;
+        $founded_businesses = DB::table('cms_settings')->where('name', 'founded_businesses')->first()->content;
+
+        $invested_into_businesses = DB::table('cms_settings')->where('name', 'invested_into_businesses')->first()->content;
+
+
 
         $facebook = DB::table('socials')->where('id', '1')->first();
         $twitter = DB::table('socials')->where('id', '2')->first();
