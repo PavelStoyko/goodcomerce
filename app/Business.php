@@ -55,7 +55,8 @@ class Business extends Model
              (
                 select businesses.cost - IF(SUM(orders.cost), SUM(orders.cost), 0) from orders where orders.business_id = businesses.id 
              ) as credit")
-        )->having('credit', '>', 0);
+        );
+//        )->having('credit', '>', 0);
     }
 
     public function getPhotoAttribute($value)
@@ -73,7 +74,8 @@ class Business extends Model
             ? "join business_tag on business_tag.business_id = businesses.id and business_tag.tag_id = (select id from tags where `name` = '{$tag}') "
             : '') .
 
-         "having credit > 0) as businesses_temp");
+         ") as businesses_temp");
+//         "having credit > 0) as businesses_temp");
 
         return $result[0]->businesses_count;
 

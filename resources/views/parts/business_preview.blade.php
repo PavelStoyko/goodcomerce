@@ -9,11 +9,12 @@
         <p class="prof_excerpt">{{$business->short_description}}</p>
     </div>
     <div class="price_wrap">
-        <div class="price_info">COST
+        <div class="price_info">Min. order
             <span class="price_item">KES {{(int) $business->cost}}</span>
         </div>
-        <div class="price_info">CREDIT
-            <span class="price_item">KES {{(int) $business->credit}}</span>
+        <div class="price_info">Financing
+            <span class="price_item">KES {{(int) $business->cost}}</span>
+{{--            <span class="price_item">KES {{(int) $business->credit}}</span>--}}
         </div>
         <div class="price_info">
             <span class="price_title">REPAYMENT</span>

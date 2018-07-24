@@ -53,7 +53,6 @@ class BusinessesController extends Controller
 
         $request->validate([
             'offset' => 'nullable|integer',
-            //'tag' => 'exists:tags,name',
         ]);
 
         $limit = 6;
@@ -91,7 +90,6 @@ class BusinessesController extends Controller
 
             return array_merge($responseData, ['html' => $html]);
         }
-
         return view('parts.businesses', $responseData);
 
     }

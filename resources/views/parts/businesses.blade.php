@@ -9,10 +9,10 @@
         <div class="container">
             <div class="row">
                 <div class="business_text">
-                    <h2 class="business_title">Start or grow your local network of a socially conscious business
+                    <h2 class="business_title">Start or grow your business with profitable, socially conscious products
                     </h2>
                     <p class="description_business">
-                        Get funded to start a dicstribution network of for businesses and product creating an impact in your local community
+                        Get financing and deep discounts to distribute products that are creating an impact in your local community
                     </p>
                 </div>
                 <div class="most_nav">

@@ -31,7 +31,8 @@
 
                                                 <a href="{{url("businesses?tag={$tag->name}")}}" class="tag_link">{{$tag->name}}</a>,
 
-                                                @if (!$loop->last), @endif
+                                                @if (!$loop->last)
+                                                @endif
 
                                             @endforeach
 
@@ -55,7 +56,8 @@
                                 </div>
                                 <div class="price_wrap">
                                     <div class="price_info">Funding
-                                        <span class="price_item">KES {{$business->cost -($business->ordersFunding($business->id))}}</span>
+                                        <span class="price_item">KES {{(int)$business->cost}}</span>
+{{--                                        <span class="price_item">KES {{$business->cost -($business->ordersFunding($business->id))}}</span>--}}
 
                                     </div>
                                     <div class="price_info">Interest
